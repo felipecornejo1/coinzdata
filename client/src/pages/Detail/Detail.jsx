@@ -1,26 +1,20 @@
-import { useEffect } from 'react'
 import chart from '../../assets/img/chart.ppm'
+import { useParams } from 'react-router-dom'
+import { State } from '../../Context'
 
-function Detail(props) {
-    console.log(props.allCryptos)
-    function fetchData(){
-        fetch('https://starknights-api.herokuapp.com/items')
-            .then(res => {
-                return res.json()
-            })
-            .then(data => {
-                console.log(data);
-            })
-    }
+function Detail() {
+    const cryptoID = useParams().id
+    const { allCryptos } = State()
 
-    useEffect(() => {
-        fetchData()
-    }, [])
+    let crypto = allCryptos.filter(crypto => {
+        return parseInt(crypto.index) === parseInt(cryptoID)
+    })[0]
 
     return(
         
         <main id='detail'>
-            <div className="detail__container">
+            {crypto ? (
+                <div className="detail__container">
                 <div className="detail__top">
                     <img src={crypto.image} alt={crypto.name} id="detail__crypto-image" />
                     <h1 className='detail__crypto-name'>{crypto.name}</h1>
@@ -42,6 +36,8 @@ function Detail(props) {
                 </div>
 
             </div>
+            ) : (<div>lloading...</div>)}
+            {/*  */}
         </main>
     )
 }

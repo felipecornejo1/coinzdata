@@ -1,24 +1,8 @@
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { State } from '../../Context'
 
 function Home() {
-    // Get all data from json file
-    const getDataFromJson = () => {
-        fetch('cryptos.json')
-            .then(response => {return response.json()})
-            .then(allCryptos => {
-                setAllCryptos(allCryptos)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    } 
-
-    useEffect(()=>{
-        getDataFromJson()
-    }, [])
-
-    const [allCryptos, setAllCryptos] = useState([])
+    const { allCryptos } = State()
 
     const tableTitles = ['#', 'Name', 'Price', 'Market Cap', 'Circulating Supply']
 

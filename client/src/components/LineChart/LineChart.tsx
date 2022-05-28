@@ -1,8 +1,9 @@
-import Chart from 'chart.js/auto'
+import React from 'react'
 
 function LineChart() {
-    return(
-        <>
-        </>
-    )
+  return (
+    <div>LineChart</div>
+  )
 }
+
+export default LineChart
