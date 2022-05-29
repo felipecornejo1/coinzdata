@@ -14,6 +14,7 @@ header {
           justify-content: center;
   padding: 50px;
   background: #161223;
+  border-bottom: 2px solid #fff;
 }
 
 header img {

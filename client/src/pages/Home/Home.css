@@ -3,6 +3,11 @@
   text-decoration: none !important;
 }
 
+#home .MuiFormControl-root {
+  width: 80vw;
+  margin: 50px 10vw 0 10vw;
+}
+
 #home .home__crypto-icon {
   width: 20px;
   margin-right: 10px;
@@ -23,5 +28,13 @@
 
 #home #home__crypto-table tbody > td {
   z-index: 100 !important;
+}
+
+#home #home__crypto-table .home__price-up {
+  color: green !important;
+}
+
+#home #home__crypto-table .home__price-down {
+  color: red !important;
 }
 /*# sourceMappingURL=Home.css.map */

@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { State } from '../../Context'
 import { CryptoChart } from '../../components/index'
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 function Detail() {
     const cryptoID = useParams().id
@@ -17,10 +19,18 @@ function Detail() {
             {crypto ? (
                 <div className="detail__container">
                 <div className="detail__top">
-                    <img src={crypto.image} alt={crypto.name} id="detail__crypto-image" />
-                    <h1 className='detail__crypto-name'>{crypto.name}</h1>
-                    <h2 className="detail__crypto-price">${crypto.current_price}</h2>
-                    <h2 className="detail__crypto-change">${crypto.change_percentage_24h}</h2>
+                    <div className="detail__top__title">
+                        <img src={crypto.image} alt={crypto.name} id="detail__crypto-image" />
+                        <h1 className='detail__crypto-name'>{crypto.name}</h1>
+                    </div>
+                    <div className="detail__price-info">
+                        <h2 className="detail__crypto-price">${crypto.current_price}</h2>
+                        {crypto.price_change_percentage_24hs > 0 ? (
+                            <h2 className="detail__crypto-change price-up"><ArrowUpwardIcon/>{crypto.price_change_percentage_24hs}%</h2>
+                            ) : (
+                            <h2 className="detail__crypto-change price-down"><ArrowDownwardIcon/>{crypto.price_change_percentage_24hs}%</h2>
+                        )}
+                    </div>
                 </div>
                 <div className="detail__crypto-data">
                     <div className="detail__data-set">

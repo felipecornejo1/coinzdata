@@ -27,13 +27,12 @@ function CryptoChart({ crypto }) {
         Price: arrayWithNumbers[i]
       })
     }
-    console.log(priceAction);
     
     // Sample chart data
     const pdata = priceAction;
     return (
         <>
-            <ResponsiveContainer width="100%" aspect={2}>
+            <ResponsiveContainer aspect={2}>
                 <LineChart data={pdata} margin={{top: 50, bottom: 50}}>
                     <CartesianGrid strokeDasharray={3} vertical="" />
                     <XAxis dataKey="date" 
