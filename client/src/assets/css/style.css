@@ -7,19 +7,39 @@
           box-sizing: border-box;
 }
 
-a {
+body {
+  background: #161223 !important;
+}
+
+#home a {
   color: white !important;
   text-decoration: none !important;
 }
 
-.home__crypto-icon {
-  width: 3%;
+#home .home__crypto-icon {
+  width: 20px;
   margin-right: 10px;
 }
 
+#home #home__crypto-table {
+  padding: 50px 0;
+}
+
+#home #home__crypto-table tbody > tr {
+  height: 70px !important;
+  z-index: 1;
+}
+
+#home #home__crypto-table .table > :not(caption) > * > * {
+  background: transparent;
+}
+
+#home #home__crypto-table tbody > td {
+  z-index: 100 !important;
+}
+
 #detail {
-  background-color: #000;
-  padding: 200px;
+  padding: 50px 0;
   min-height: 100vh;
 }
 
@@ -49,10 +69,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #242424;
   border-radius: 20px;
   min-height: 60vh;
-  width: 60vw;
+  width: 80vw;
+  margin: auto;
   padding: 50px;
 }
 
@@ -68,6 +88,10 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 80%;
+}
+
+#detail .detail__top .detail__crypto-price {
+  color: #fff;
 }
 
 #detail .detail__crypto-data {
@@ -97,13 +121,15 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100px;
-  background-color: #1d1d1d;
   padding: 10px 50px;
-  border-radius: 20px;
 }
 
 #detail .detail__crypto-data .detail__data-set p {
   width: 100%;
+}
+
+#detail .detail__crypto-data .detail__data-set .detail__data-set__label {
+  font-size: 2rem;
 }
 
 #detail #detail__crypto-image {
@@ -116,5 +142,59 @@ a {
 #detail #chart {
   width: 100%;
   margin: 50px 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+  background: #161223;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+header h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  text-align: center;
+}
+
+header h2 {
+  color: rgba(255, 255, 255, 0.738);
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header .header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */

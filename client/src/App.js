@@ -1,4 +1,5 @@
 import { Home, Detail } from './pages/index'
+import { Header } from './sections/index'
 import { State } from './Context'
 import { Routes, Route } from 'react-router-dom'
 import './assets/css/style.css'
@@ -9,7 +10,7 @@ function App() {
   console.log(allCryptos);
   return (
     <>
-      <header></header>
+      <Header/>
       <Routes>
             <Route path='/detail/:id' element={< Detail 
             />} />

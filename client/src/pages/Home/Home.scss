@@ -1,9 +1,23 @@
-a {
-    color: white !important;
-    text-decoration: none !important;
-}
-
-.home__crypto-icon {
-    width: 3%;
-    margin-right: 10px;
+#home {
+    a {
+        color: white !important;
+        text-decoration: none !important;
+    }
+    .home__crypto-icon {
+        width: 20px;
+        margin-right: 10px;
+    }
+    #home__crypto-table {
+        padding: 50px 0;
+        tbody > tr {
+            height: 70px !important;
+            z-index: 1;
+        }
+        .table>:not(caption)>*>* {
+            background: transparent;
+        }
+        tbody > td {
+            z-index: 100 !important;
+        }
+    }
 }

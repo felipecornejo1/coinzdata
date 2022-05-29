@@ -6,10 +6,12 @@ import Context from './Context'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <Context>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Context>
+  <React.StrictMode>
+    <Context>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Context>
+  </React.StrictMode>
 )
 

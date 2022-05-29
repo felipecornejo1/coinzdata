@@ -1,10 +1,27 @@
-a {
+#home a {
   color: white !important;
   text-decoration: none !important;
 }
 
-.home__crypto-icon {
-  width: 3%;
+#home .home__crypto-icon {
+  width: 20px;
   margin-right: 10px;
+}
+
+#home #home__crypto-table {
+  padding: 50px 0;
+}
+
+#home #home__crypto-table tbody > tr {
+  height: 70px !important;
+  z-index: 1;
+}
+
+#home #home__crypto-table .table > :not(caption) > * > * {
+  background: transparent;
+}
+
+#home #home__crypto-table tbody > td {
+  z-index: 100 !important;
 }
 /*# sourceMappingURL=Home.css.map */

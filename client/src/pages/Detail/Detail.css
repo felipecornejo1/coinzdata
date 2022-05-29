@@ -1,6 +1,5 @@
 #detail {
-  background-color: #000;
-  padding: 200px;
+  padding: 50px 0;
   min-height: 100vh;
 }
 
@@ -30,10 +29,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #242424;
   border-radius: 20px;
   min-height: 60vh;
-  width: 60vw;
+  width: 80vw;
+  margin: auto;
   padding: 50px;
 }
 
@@ -49,6 +48,10 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 80%;
+}
+
+#detail .detail__top .detail__crypto-price {
+  color: #fff;
 }
 
 #detail .detail__crypto-data {
@@ -78,13 +81,15 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100px;
-  background-color: #1d1d1d;
   padding: 10px 50px;
-  border-radius: 20px;
 }
 
 #detail .detail__crypto-data .detail__data-set p {
   width: 100%;
+}
+
+#detail .detail__crypto-data .detail__data-set .detail__data-set__label {
+  font-size: 2rem;
 }
 
 #detail #detail__crypto-image {
