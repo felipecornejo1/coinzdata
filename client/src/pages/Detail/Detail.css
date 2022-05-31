@@ -1,4 +1,5 @@
 #detail {
+  position: relative;
   padding: 50px 0;
   min-height: 100vh;
 }
@@ -15,6 +16,23 @@
           flex-grow: 1;
   text-align: left;
   margin-left: 20px;
+}
+
+#detail .detail__go-back {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(68, 69, 91, 0.6);
+  outline: none;
+  border: none;
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+}
+
+#detail .detail__go-back:hover {
+  background-color: #44455b;
 }
 
 #detail .recharts-surface {

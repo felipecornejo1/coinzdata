@@ -1,7 +1,7 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { State } from '../../Context'
-import { CryptoChart, AddToWatchlist } from '../../components/index'
+import { CryptoChart, AddToWatchlist, Loader } from '../../components/index'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 
@@ -16,6 +16,9 @@ function Detail() {
     <main id='detail'>
       {crypto ? (
         <div className='detail__container'>
+          <Link to='/'>
+            <button className='detail__go-back'>Go Back</button>
+          </Link>
           <div className='detail__top'>
             <div className='detail__top__title'>
               <img
@@ -71,7 +74,7 @@ function Detail() {
           />
         </div>
       ) : (
-        <div>loading...</div>
+        <Loader />
       )}
       {/*  */}
     </main>
