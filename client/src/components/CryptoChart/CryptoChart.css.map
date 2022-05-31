@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "LineChart.scss"
+        "CryptoChart.scss"
     ],
     "names": [],
-    "file": "LineChart.css"
+    "file": "CryptoChart.css"
 }

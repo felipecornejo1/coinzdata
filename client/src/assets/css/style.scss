@@ -1,18 +1,23 @@
 *,
 ::after,
 ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: rgb(22, 18, 35) !important;
+  background: rgb(22, 18, 35) !important;
 }
 
 // Pages
 @import '../../pages/Home/Home.scss';
 @import '../../pages/Detail/Detail.scss';
+@import '../../pages/NotFound/NotFound.scss';
 
 // Sections
-@import '../../sections/Header/Header.scss'
+@import '../../sections/Header/Header.scss';
+
+// Components
+@import '../../components/Loader/Loader.scss';
+@import '../../components/AddToWatchlist/AddToWatchlist.scss';

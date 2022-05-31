@@ -16,14 +16,35 @@ body {
   text-decoration: none !important;
 }
 
+#home .home__no-cryptos-found {
+  color: #fff;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  word-wrap: break-word;
+}
+
 #home .MuiFormControl-root {
-  width: 80vw;
+  width: 77vw;
   margin: 50px 10vw 0 10vw;
 }
 
 #home .home__crypto-icon {
   width: 20px;
   margin-right: 10px;
+}
+
+#home .home__crypto-symbol {
+  background-color: rgba(91, 86, 104, 0.6);
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+#home .home__crypto-symbol:hover {
+  background-color: #5b5668;
 }
 
 #home #home__crypto-table {
@@ -56,7 +77,8 @@ body {
   min-height: 100vh;
 }
 
-#detail h1, #detail p {
+#detail h1,
+#detail p {
   color: #fff;
   margin: 0;
   width: -webkit-fit-content;
@@ -67,6 +89,10 @@ body {
           flex-grow: 1;
   text-align: left;
   margin-left: 20px;
+}
+
+#detail .recharts-surface {
+  width: 70vw !important;
 }
 
 #detail .detail__container {
@@ -113,11 +139,42 @@ body {
   display: flex;
 }
 
-#detail .detail__top .detail__top__title .detail__crypto.name {
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn .detail__crypto-name {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: 100%;
+  padding-left: 20px;
   margin: auto;
+}
+
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn .detail__crypto-name-ctn__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn .detail__crypto-name-ctn__bottom .detail__crypto-rank {
+  background-color: rgba(68, 69, 91, 0.6);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  margin-right: 20px;
 }
 
 #detail .detail__top .detail__price-info {
@@ -168,9 +225,9 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #detail .detail__crypto-data .detail__data-set {
@@ -181,19 +238,26 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 20px;
   height: 100px;
+  background-color: rgba(68, 69, 91, 0.6);
+  border-radius: 20px;
   padding: 10px 50px;
 }
 
 #detail .detail__crypto-data .detail__data-set p {
   width: 100%;
+  text-align: center;
+  margin: 0;
 }
 
 #detail .detail__crypto-data .detail__data-set .detail__data-set__label {
   font-size: 2rem;
+  text-align: center;
+  margin: 0;
 }
 
 #detail #detail__crypto-image {
@@ -201,12 +265,22 @@ body {
   border-radius: 50%;
   aspect-ratio: 1/1;
   padding: 10px;
+  margin-right: 20px;
   height: inherit;
 }
 
 #detail #chart {
   width: 100%;
   margin: 50px 0;
+}
+
+#not-found {
+  padding: 50px;
+}
+
+#not-found h1 {
+  color: #fff;
+  text-align: center;
 }
 
 header {
@@ -262,5 +336,83 @@ header .header__top {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   margin-bottom: 20px;
+}
+
+.lds-ring {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.add-to-watchlist {
+  color: #fff;
+  background-color: rgba(68, 69, 91, 0.6);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  margin-right: 20px;
+  cursor: pointer;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.add-to-watchlist:hover {
+  background-color: #44455b;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAe,qBAAO;EACtC,OAAO,EAAE,aAAa;EACtB,aAAa,EAAE,GAAG;EAClB,YAAY,EAAE,IAAI;EAClB,MAAM,EAAE,OAAO;EACf,UAAU,EAAE,iBAAiB;CAI9B;;AAXD,AAQE,iBARe,AAQd,MAAM,CAAC;EACN,gBAAgB,EAAe,OAAO;CACvC",
+    "sources": [
+        "AddToWatchlist.scss"
+    ],
+    "names": [],
+    "file": "AddToWatchlist.css"
+}

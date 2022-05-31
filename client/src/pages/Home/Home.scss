@@ -1,33 +1,49 @@
 #home {
-    a {
-        color: white !important;
-        text-decoration: none !important;
+  a {
+    color: white !important;
+    text-decoration: none !important;
+  }
+  .home__no-cryptos-found {
+    color: #fff;
+    text-align: center;
+    height: fit-content;
+    word-wrap: break-word;
+  }
+  .MuiFormControl-root {
+    width: 77vw;
+    margin: 50px 10vw 0 10vw;
+  }
+  .home__crypto-icon {
+    width: 20px;
+    margin-right: 10px;
+  }
+  .home__crypto-symbol {
+    background-color: rgba($color: #5b5668, $alpha: 0.6);
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    &:hover {
+      background-color: rgba($color: #5b5668, $alpha: 1);
     }
-    .MuiFormControl-root {
-        width: 80vw;
-        margin: 50px 10vw 0 10vw;
+  }
+  #home__crypto-table {
+    padding: 50px 0;
+    tbody > tr {
+      height: 70px !important;
+      z-index: 1;
     }
-    .home__crypto-icon {
-        width: 20px;
-        margin-right: 10px;
+    .table > :not(caption) > * > * {
+      background: transparent;
     }
-    #home__crypto-table {
-        padding: 50px 0;
-        tbody > tr {
-            height: 70px !important;
-            z-index: 1;
-        }
-        .table>:not(caption)>*>* {
-            background: transparent;
-        }
-        tbody > td {
-            z-index: 100 !important;
-        }
-        .home__price-up {
-            color: green !important;
-        }
-        .home__price-down {
-            color: red !important;
-        }
+    tbody > td {
+      z-index: 100 !important;
     }
+    .home__price-up {
+      color: green !important;
+    }
+    .home__price-down {
+      color: red !important;
+    }
+  }
 }

@@ -3,7 +3,8 @@
   min-height: 100vh;
 }
 
-#detail h1, #detail p {
+#detail h1,
+#detail p {
   color: #fff;
   margin: 0;
   width: -webkit-fit-content;
@@ -14,6 +15,10 @@
           flex-grow: 1;
   text-align: left;
   margin-left: 20px;
+}
+
+#detail .recharts-surface {
+  width: 70vw !important;
 }
 
 #detail .detail__container {
@@ -60,11 +65,42 @@
   display: flex;
 }
 
-#detail .detail__top .detail__top__title .detail__crypto.name {
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn .detail__crypto-name {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: 100%;
+  padding-left: 20px;
   margin: auto;
+}
+
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn .detail__crypto-name-ctn__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#detail .detail__top .detail__top__title .detail__crypto-name-ctn .detail__crypto-name-ctn__bottom .detail__crypto-rank {
+  background-color: rgba(68, 69, 91, 0.6);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  margin-right: 20px;
 }
 
 #detail .detail__top .detail__price-info {
@@ -115,9 +151,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #detail .detail__crypto-data .detail__data-set {
@@ -128,19 +164,26 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 20px;
   height: 100px;
+  background-color: rgba(68, 69, 91, 0.6);
+  border-radius: 20px;
   padding: 10px 50px;
 }
 
 #detail .detail__crypto-data .detail__data-set p {
   width: 100%;
+  text-align: center;
+  margin: 0;
 }
 
 #detail .detail__crypto-data .detail__data-set .detail__data-set__label {
   font-size: 2rem;
+  text-align: center;
+  margin: 0;
 }
 
 #detail #detail__crypto-image {
@@ -148,6 +191,7 @@
   border-radius: 50%;
   aspect-ratio: 1/1;
   padding: 10px;
+  margin-right: 20px;
   height: inherit;
 }
 

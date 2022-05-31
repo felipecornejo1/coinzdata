@@ -3,14 +3,35 @@
   text-decoration: none !important;
 }
 
+#home .home__no-cryptos-found {
+  color: #fff;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  word-wrap: break-word;
+}
+
 #home .MuiFormControl-root {
-  width: 80vw;
+  width: 77vw;
   margin: 50px 10vw 0 10vw;
 }
 
 #home .home__crypto-icon {
   width: 20px;
   margin-right: 10px;
+}
+
+#home .home__crypto-symbol {
+  background-color: rgba(91, 86, 104, 0.6);
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+#home .home__crypto-symbol:hover {
+  background-color: #5b5668;
 }
 
 #home #home__crypto-table {
